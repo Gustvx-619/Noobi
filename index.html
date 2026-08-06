@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Noobi Studio — Producción Audiovisual Automotriz | Colombia</title>
+  <meta name="description" content="Estudio de producción audiovisual especializado en el nicho automotriz y de motos en Colombia. Video y fotografía para marcas como Kawasaki, Ducati, CFMoto, Isuzu, Voyah y RidePro.">
+  <meta name="theme-color" content="#0a0709">
+
+  <!-- Open Graph / vista previa al compartir el link (WhatsApp, Instagram, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Noobi Studio — Producción Audiovisual Automotriz">
+  <meta property="og:description" content="Video y fotografía para el mundo automotriz y de las motos. Colombia.">
+  <!-- TODO: sube una imagen de 1200x630px a Assets/Imagenes/og-cover.jpg -->
+  <meta property="og:image" content="Assets/Imagenes/og-cover.jpg">
+
+  <!-- Favicon: la "N" del logo recortada sobre el fondo de marca -->
+  <link rel="icon" type="image/png" sizes="64x64" href="Assets/Imagenes/favicon.png">
+  <link rel="apple-touch-icon" href="Assets/Imagenes/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="is-locked">
+
+  <!-- ══════════════════════════════════════════════
+       INTRO — secuencia de "encendido"
+       ══════════════════════════════════════════════ -->
+  <div id="intro" class="intro" role="presentation">
+    <div class="intro__grid" aria-hidden="true"></div>
+    <div class="intro__beam" aria-hidden="true"></div>
+
+    <div class="intro__content">
+      <!-- Copia de "noobistudio logo blanco@4x.png" con nombre sin espacios ni @.
+           Si actualizas el logo, reemplaza logo-intro.png (es el que se usa). -->
+      <div class="intro__logo">
+        <img src="Assets/Imagenes/logo-intro.png" alt="Noobi Studio" width="1221" height="458">
+      </div>
+      <p class="intro__sub">Producción Audiovisual Automotriz</p>
+    </div>
+
+    <div class="intro__bar" aria-hidden="true"><span></span></div>
+    <button type="button" class="intro__skip" id="introSkip">Saltar intro</button>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       HEADER
+       ══════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <a href="#inicio" class="logo" aria-label="Noobi Studio — Inicio">
+        <img src="Assets/Imagenes/logo-intro.png" alt="Noobi Studio" class="logo__img" width="1221" height="458">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#inicio"        class="nav__link is-active">Inicio</a>
+        <a href="#portafolio"    class="nav__link">Portafolio</a>
+        <a href="#marcas"        class="nav__link">Marcas</a>
+        <a href="tarifario.html" class="nav__link">Tarifario</a>
+        <a href="#contacto"      class="nav__link">Contacto</a>
+        <a href="#contacto" class="btn btn--primary nav__cta">Cotizar proyecto</a>
+      </nav>
+
+      <button type="button" class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════
+         HERO
+         ══════════════════════════════════════════════ -->
+    <section class="hero" id="inicio">
+
+      <!-- Video de fondo. Si el archivo no existe, se ve el degradado de respaldo.
+           TODO: sube tu reel a Assets/Videos/hero.mp4 (recomendado: 1920x1080, <8MB, sin audio) -->
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata"
+             poster="Assets/Imagenes/hero-poster.jpg">
+        <source src="Assets/Videos/hero.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__streaks" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow" data-reveal>
+          <span class="eyebrow__dot"></span> Estudio audiovisual · Colombia
+        </p>
+
+        <h1 class="hero__title" data-reveal data-reveal-delay="80">
+          Contamos historias<br><span class="accent">a toda velocidad</span>
+        </h1>
+
+        <p class="hero__lead" data-reveal data-reveal-delay="160">
+          Producción de video y fotografía para el mundo automotriz y de las motos.
+          Desde el primer arranque hasta la última toma.
+        </p>
+
+        <div class="hero__actions" data-reveal data-reveal-delay="240">
+          <a href="#portafolio" class="btn btn--primary">Ver portafolio</a>
+          <a href="#contacto" class="btn btn--ghost">Trabajemos juntos</a>
+        </div>
+
+        <!-- TODO: ajusta estos números a tus cifras reales -->
+        <ul class="stats" data-reveal data-reveal-delay="320">
+          <li class="stat"><strong>+6</strong><span>Marcas atendidas</span></li>
+          <li class="stat"><strong>+50</strong><span>Producciones</span></li>
+          <li class="stat"><strong>4</strong><span>Años rodando</span></li>
+        </ul>
+      </div>
+
+      <a href="#portafolio" class="hero__scroll" aria-label="Bajar al portafolio">
+        <span class="hero__scroll-line"></span>Scroll
+      </a>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         PORTAFOLIO
+         ══════════════════════════════════════════════ -->
+    <section class="section" id="portafolio">
+      <div class="container">
+
+        <header class="section__head">
+          <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Portafolio</p>
+          <h2 class="section__title" data-reveal data-reveal-delay="80">Amigos del estudio</h2>
+          <p class="section__lead" data-reveal data-reveal-delay="140">
+            Una muestra de proyectos aliados, lanzamientos de producto y piezas de marcas aliadas.
+          </p>
+        </header>
+
+        <div class="filters" role="tablist" aria-label="Filtrar portafolio" data-reveal>
+          <button type="button" class="filter is-active" role="tab" aria-selected="true"  data-filter="all">Todos</button>
+          <button type="button" class="filter"           role="tab" aria-selected="false" data-filter="motos">Motos</button>
+          <button type="button" class="filter"           role="tab" aria-selected="false" data-filter="autos">Autos</button>
+          <button type="button" class="filter"           role="tab" aria-selected="false" data-filter="comercial">Comercial</button>
+        </div>
+
+        <!-- ─────────────────────────────────────────────────────────
+             CÓMO LLENAR CADA TARJETA:
+               • Video local      → data-mp4="Assets/Videos/proyecto-01.mp4"
+               • Video de YouTube → data-yt="ID_DEL_VIDEO"  (el ID, no la URL completa)
+               • Miniatura        → style="--img:url('Assets/Imagenes/mi-portada.jpg')"
+                 Si la omites y hay data-mp4, se usa un fotograma del video.
+
+             FORMATO — va en el <article>, controla miniatura y visor a la vez:
+               data-format="vertical"    9:16  (reels, TikTok)  ← el que usas
+               data-format="cuadrado"    1:1
+               quitar el atributo        16:10 horizontal
+
+             Si no pones data-mp4 ni data-yt, el visor muestra "Próximamente".
+             ───────────────────────────────────────────────────────── -->
+        <div class="grid" id="portfolioGrid">
+
+          <article class="card" data-format="vertical" data-cat="motos" data-reveal>
+            <button type="button" class="card__btn"
+
+                    data-mp4="Assets/Videos/Kawassaki.mp4"
+                    data-title="Kawasaki Ninja — Lanzamiento">
+              <span class="card__media">
+                <span class="card__play" aria-hidden="true"></span>
+              </span>
+              <span class="card__info">
+                <span class="card__tag">Motos</span>
+                <span class="card__title">Kawasaki Ninja — Lanzamiento</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="card" data-format="vertical" data-cat="motos" data-reveal data-reveal-delay="60">
+            <button type="button" class="card__btn"
+   
+                    data-mp4="Assets/Videos/Ducati.mov"
+                    data-title="Ducati — Sesión editorial">
+              <span class="card__media">
+                <span class="card__play" aria-hidden="true"></span>
+              </span>
+              <span class="card__info">
+                <span class="card__tag">Motos</span>
+                <span class="card__title">Ducati — Sesión editorial</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="card" data-format="vertical" data-cat="autos" data-reveal data-reveal-delay="120">
+            <button type="button" class="card__btn"
+                    data-mp4="Assets/Videos/Voyage.mov"
+                    data-title="Voyah — Spot eléctrico">
+              <span class="card__media">
+                <span class="card__play" aria-hidden="true"></span>
+              </span>
+              <span class="card__info">
+                <span class="card__tag">Autos</span>
+                <span class="card__title">Voyah — Spot eléctrico</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="card" data-format="vertical" data-cat="autos" data-reveal>
+            <button type="button" class="card__btn"
+                    data-mp4="Assets/Videos/Isuzu.mov"
+                    data-title="Isuzu — Prueba de ruta">
+              <span class="card__media">
+                <span class="card__play" aria-hidden="true"></span>
+              </span>
+              <span class="card__info">
+                <span class="card__tag">Autos</span>
+                <span class="card__title">Isuzu — Prueba de ruta</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="card" data-format="vertical" data-cat="motos" data-reveal data-reveal-delay="60">
+            <button type="button" class="card__btn"
+                    data-mp4="Assets/Videos/ducati Chiimba.mp4"
+                    data-title="CFMoto — Campaña de marca">
+              <span class="card__media">
+                <span class="card__play" aria-hidden="true"></span>
+              </span>
+              <span class="card__info">
+                <span class="card__tag">Motos</span>
+                <span class="card__title">CFMoto — Campaña de marca</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="card" data-format="vertical" data-cat="comercial" data-reveal data-reveal-delay="120">
+            <button type="button" class="card__btn"
+                    data-mp4="Assets/Videos/ducati Chiimba.mp4"
+                    data-title="RidePro — Producto en detalle">
+              <span class="card__media">
+                <span class="card__play" aria-hidden="true"></span>
+              </span>
+              <span class="card__info">
+                <span class="card__tag">Comercial</span>
+                <span class="card__title">RidePro — Producto en detalle</span>
+              </span>
+            </button>
+          </article>
+
+        </div>
+
+        <p class="grid__empty" id="gridEmpty" hidden>No hay proyectos en esta categoría todavía.</p>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         MARCAS
+         ══════════════════════════════════════════════ -->
+    <section class="section section--alt" id="marcas">
+      <div class="container">
+
+        <header class="section__head">
+          <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Confianza</p>
+          <h2 class="section__title" data-reveal data-reveal-delay="80">Marcas con las que he trabajado</h2>
+        </header>
+
+        <!-- Para usar logos reales, reemplaza el <span> por:
+             <img src="Assets/Imagenes/marcas/kawasaki.svg" alt="Kawasaki" class="brand__logo"> -->
+        <ul class="brands" data-reveal>
+          <li class="brand"><span class="brand__name">Kawasaki</span></li>
+          <li class="brand"><span class="brand__name">Ducati</span></li>
+          <li class="brand"><span class="brand__name">CFMoto</span></li>
+          <li class="brand"><span class="brand__name">Isuzu</span></li>
+          <li class="brand"><span class="brand__name">Voyah</span></li>
+          <li class="brand"><span class="brand__name">RidePro</span></li>
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         CONTACTO
+         ══════════════════════════════════════════════ -->
+    <section class="section" id="contacto">
+      <div class="container">
+
+        <div class="contact">
+
+          <div class="contact__intro">
+            <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span> Contacto</p>
+            <h2 class="section__title" data-reveal data-reveal-delay="80">¿Tienes un proyecto en mente?</h2>
+            <p class="section__lead" data-reveal data-reveal-delay="140">
+              Cuéntame qué necesitas y te respondo con una propuesta.
+              También trabajo con estudiantes y proyectos independientes.
+            </p>
+
+            <!-- TODO: reemplaza estos datos por los tuyos -->
+            <ul class="contact__list" data-reveal data-reveal-delay="200">
+              <li>
+                <span class="contact__label">Correo</span>
+                <a href="mailto:anferibo2002@gmail.com">anferibo2002@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact__label">WhatsApp</span>
+                <a href="https://wa.me/573138288345" target="_blank" rel="noopener">+57 313 8288345</a>
+              </li>
+              <li>
+                <span class="contact__label">Instagram</span>
+                <a href="https://instagram.com/2noobi3" target="_blank" rel="noopener">@2noobi3</a>
+              </li>
+              <li>
+                <span class="contact__label">Ubicación</span>
+                <span>Colombia · Disponible para viajar</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sitio estático: el formulario arma un mensaje y lo abre en WhatsApp -->
+          <form class="form" id="contactForm" novalidate data-reveal data-reveal-delay="120">
+            <div class="field">
+              <label for="f-nombre">Nombre</label>
+              <input type="text" id="f-nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre o el de tu marca">
+            </div>
+
+            <div class="field">
+              <label for="f-email">Correo</label>
+              <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="tucorreo@ejemplo.com">
+            </div>
+
+            <div class="field">
+              <label for="f-tipo">Tipo de proyecto</label>
+              <select id="f-tipo" name="tipo">
+                <option>Video comercial</option>
+                <option>Fotografía de producto</option>
+                <option>Cobertura de evento</option>
+                <option>Contenido para redes</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-mensaje">Mensaje</label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" required placeholder="Contame de qué se trata, fechas y presupuesto aproximado."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block">Enviar por WhatsApp</button>
+            <p class="form__note" id="formNote" role="status"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--sm">
+        <img src="Assets/Imagenes/logo-intro.png" alt="Noobi Studio" class="logo__img" width="1221" height="458">
+      </a>
+
+      <nav class="footer__social" aria-label="Redes sociales">
+        <a href="https://instagram.com/2noobi3" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@2noobi3"  target="_blank" rel="noopener">TikTok</a>
+        <a href="https://wa.me/573138288345"        target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+
+      <p class="footer__copy">© <span id="year">2026</span> Noobi Studio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════
+       VISOR DE VIDEO (lightbox)
+       ══════════════════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__panel">
+      <div class="lightbox__bar">
+        <h3 class="lightbox__title" id="lbTitle"></h3>
+        <button type="button" class="lightbox__close" data-close aria-label="Cerrar visor">&times;</button>
+      </div>
+      <div class="lightbox__stage" id="lbStage"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
